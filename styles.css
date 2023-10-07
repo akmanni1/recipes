@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1em;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Start of my CSS edits */
+html {
+    background-color: rgba(122, 191, 191, .5)
+    ;
+}
+body {
+    background-color: #F2F2F2;
+    min-width: 414px;
+    max-width: 768px;
+    margin: 0 auto;
+}
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+h1 {
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 20px;
+    margin: 0 auto;
+    top: 140px;
+}
+h2 {
+    font-size: 30px; 
+}
+h3 {
+    font-size: 25;
+}
+nav a, nav span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+menu li, #social li, footer {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+nav, li, p, dd, input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+menu {
+    position: absolute;
+    display: inline-block;
+    font-family: 'Bebas Neue', sans-serif;
+    list-style: none;
+    padding-inline-start: 0px;
+    top: 185px;
+    width: 90px;
+    background-color: #FFFFFF;
+    border: 1.5px solid #EB5428;
+}
+menu li {
+    display: flex;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #EB5428;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#tacos {
+    position: relative;
+    display: block;
+}
+#details {
+    background-color: #0D0D0D;
+    color: #7ABFBF;
+    padding: 10px;
+    text-align: center;
+}
+dl {
+    display: inline-block;
+    padding: 0 20px;
+}
+dt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+dd {
+    margin-inline-start: 0px;
+}
+#ingredients ul {
+    list-style: revert;
+}
+ol {
+    list-style: revert;
+}
+#search {
+    position: absolute;
+    display: inline;
+    margin: 0 auto;
+    height: 40px;
+}
+#search input{
+    width: 300px;
+}
+#search h3 {
+    visibility: hidden;
+}
+header {
+    position: absolute;
+    top: 0px;
+    margin: 0px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(122, 191, 191, .5);
+}
+header h2, header input {
+    visibility: hidden;
+}
+nav {
+    display: flex;
+}
+nav li {
+    text-align: center;
+}
+[href="#avatar"] {
+    color: #0D0D0D;
+}
+#dishes {
+    display: grid;
+    background-color: #7ABFBF;
+}
+#dishes div {
+    display: grid;
+}
+.stars {
+    display: inline;
+}
+#social {
+    position: relative;
+}
+#social li {
+    display: inline-flex;
+    padding: 0 25px;
+    text-align: center;
+}
+footer h2, footer h3 {
+    visibility: hidden;
+}
+footer img {
+    width: 30%;
+    height: auto;
+}
+
+/* MEDIA QUERY FOR SCREEN AND MIN-WIDTH OF 414PX */
+ @media screen and (min-width: 414px) {
+    body, header, nav, main, footer {
+        width: 414px;
+        margin: 0 auto;
+    }
+    nav li {
+        justify-content: center;
+        /* flex-shrink: 0;
+        flex-basis: 130px; */
+    }
+    main {
+        min-width: 485px;
+    }
+    #gallery div {
+        grid-template-columns: 1fr;
+        grid-row-gap: 5px;
+    }
+    input {
+        width: 360px;
+    }
+}
+  
+/* MEDIA QUERY FOR SCREEN AND MIN-WIDTH OF 768PX */
+@media screen and (min-width: 768px) {
+    body, nav, header, main, footer {
+        width: 768px;
+        margin: 0 auto;
+    }
+    menu li {
+        padding: 10px 25px 46px 15px;
+    }
+    main {
+        max-width: 768px;
+    }
+    #tacos img {
+        width: 40%;
+        height: auto;
+        position: relative;
+        left: 95px;
+        top: 163px;
+    }
+    #tacos p {
+        position: relative;
+        top: -300px;
+        left: 200px;
+        padding: 20px 0;
+        margin: 0 auto;
+        width: 40%;
+    }
+    #ingredients, #directions {
+        position: relative;
+    }
+    #ingredients h2, #directions h2 {
+        margin-left: 40px;
+    }
+    #ingredients {
+        width: 20%;
+        top: 1px;
+    }
+    #directions {
+        width: 75%;
+        top: -255px;
+        left: 150px;
+    }
+    header {
+        height: 90px;
+    }
+    nav img {
+        width: 20%;
+        height: auto;
+    }
+    #dishes div {
+        grid-template-columns: repeat(4, 1fr)
+        /* grid-column-gap: 5px;
+        grid-row-gap: 5px; */
+    }
+    #dishes h2 {
+        text-align: center;
+    }
+    .icon-tabler-tools-kitchen {
+        top: 0;
+        left: 0;
+    }
+    nav input {
+        visibility: hidden;
+    }
+    nav label {
+        display: inline-block;
+        position: relative;
+        bottom: 5px;
+        left: 30px;
+    }
+    nav ul {
+        overflow: visible;
+        display: inline-flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0px;
+        max-width: 20%;
+    }
+    nav li:first-child {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        transform: scale(1.5);
+    }
+    nav li:not(:first-child):not(:last-child) {
+        margin: 0 -150px 0 0;
+    }
+    nav li:last-child {
+        position: absolute;
+        top: -10px;
+        left: 720px;
+    }
+    span svg {
+        visibility: hidden;
+    }
+    #search {
+        top: 50px;
+        left: 230px;
+    }
+    svg.icon.icon-tabler.icon-tabler-search {
+        position: absolute;
+        top: 50px;
+        left: 530px;
+    }
+}
+/* MEDIA QUERY FOR SCREEN AND MIN-WIDTH OF 1280PX */
+@media screen and (min-width: 1280px) {
+    body, nav, header, main, footer {
+        width: 768px;
+        margin: 0 auto;
+    }
+    menu li {
+        padding: 10px 25px 46px 15px;
+    }
+    main {
+        max-width: 768px;
+    }
+    #tacos img {
+        width: 40%;
+        height: auto;
+        position: relative;
+        left: 95px;
+        top: 163px;
+    }
+    #tacos p {
+        position: relative;
+        top: -300px;
+        left: 200px;
+        padding: 20px 0;
+        margin: 0 auto;
+        width: 40%;
+    }
+    #ingredients, #directions {
+        position: relative;
+    }
+    #ingredients h2, #directions h2 {
+        margin-left: 40px;
+    }
+    #ingredients {
+        width: 20%;
+        top: 1px;
+    }
+    #directions {
+        width: 75%;
+        top: -255px;
+        left: 150px;
+    }
+    header {
+        height: 90px;
+    }
+    nav img {
+        width: 20%;
+        height: auto;
+    }
+    #dishes div {
+        grid-template-columns: repeat(4, 1fr)
+        /* grid-column-gap: 5px;
+        grid-row-gap: 5px; */
+    }
+    #dishes h2 {
+        text-align: center;
+    }
+    .icon-tabler-tools-kitchen {
+        top: 0;
+        left: 0;
+    }
+    nav input {
+        visibility: hidden;
+    }
+    nav label {
+        display: inline-block;
+        position: relative;
+        bottom: 5px;
+        left: 30px;
+    }
+    nav ul {
+        overflow: visible;
+        display: inline-flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0px;
+        max-width: 20%;
+    }
+    nav li:first-child {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        transform: scale(1.5);
+    }
+    nav li:not(:first-child):not(:last-child) {
+        margin: 0 -150px 0 0;
+    }
+    nav li:last-child {
+        position: absolute;
+        top: -10px;
+        left: 720px;
+    }
+    span svg {
+        visibility: hidden;
+    }
+    #search {
+        top: 50px;
+        left: 230px;
+    }
+    svg.icon.icon-tabler.icon-tabler-search {
+        position: absolute;
+        top: 50px;
+        left: 530px;
+    }
+}
+
+/* MEDIA QUERY PRINT */
+@media print {
+    body {
+        font-family: serif;
+        margin: 0.5px;
+    }
+    nav {
+        display: none;
+    }
+    a:after {
+        content: "("attr(href)")";
+    }
+    img {
+        display: none;
+        filter: grayscale(100%);
+    }
+}
