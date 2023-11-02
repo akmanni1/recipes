@@ -385,7 +385,7 @@ footer img {
         justify-content: space-between;
         position: absolute;
         top: 0px;
-        max-width: 20%;
+        max-width: 75%;
     }
     nav li:first-child {
         position: absolute;
